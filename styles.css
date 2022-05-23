@@ -10,7 +10,7 @@ html, body {
 }
 
 div {
-	border: black solid;
+	border: blacak solid 1px;
 }
 
 .main {
@@ -18,6 +18,10 @@ div {
 	display: grid;
 	grid-template-columns: 1fr 6fr 2fr;
 	grid-template-rows: repeat(6, 1fr);
+}
+
+.header div {
+	border: blaack 1px solid;
 }
 
 .header {
@@ -35,12 +39,55 @@ div {
 .top {
 	align-items: center;
 	display: grid;
-	grid-template-columns: 1fr 4fr 1fr 1fr 3fr;
+	grid-template-columns: 0.05fr 0.6fr 0.5fr;
+}
+
+.right {
+	display: grid;
+	align-items: center;
+	justify-content: right;
+	padding-right: 2vw;
+	grid-template-columns: repeat(3, 0.1fr);
+}
+
+.search-icon {
+	display: grid;
+	justify-content: right;
+	padding-right: 0.5vw;
+}
+
+.search {
+	border-radius: 20px;
+	padding-left: 5px;
+	background-color: var(--grey);
+}
+
+.alert, .avatar {
+	display: grid;
+	justify-content: center;
+	padding-right: 1vw;
+}
+
+.account-name {
+	width: 7vw;
+	font-size: 18px;
 }
 
 .bottom {
 	display: grid;
 	grid-template-columns: 2fr 4fr 1fr 1fr 1fr;
+}
+
+.button {
+	background-color: var(--red);
+	color: white;
+	border-radius: 20px;
+	height: 3vh;
+	width: 6vw;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	font-size: min(1.4vh, 0.7vw);
 }
 
 .sidebar {
@@ -50,12 +97,15 @@ div {
 	display: grid;
 	grid-auto-rows: min-content;
 	row-gap: 4vh;
+	color: white;
+	padding: 15px;
 }
 
 .logo, .menu, .settings {
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	row-gap: 1.5vh;
+	padding: 5px;
 }	
 
 .projects, .annoucements, .trending {
@@ -81,8 +131,10 @@ div {
 	grid-column: 1 / span 2;
 	padding: 2.5px;
 	padding-top: 10px;
+	padding-bottom: 10px;
 	margin-left: 2.5vw;
 	margin-right: 2.5vw;
+	font-size: 22px;
 }
 
 .card-container {
@@ -103,19 +155,22 @@ div {
 .title {
 	display: grid;
 	align-items: flex-end;
-	padding-left: 0.5vw;
+	padding-left: 1.5vw;
+	font-size: 16px;
+	font-weight: bold;
 }
 
 .text {
-	padding-left: 0.5vw;
+	padding-left: 1.5vw;
+	color: gray;
+	font-size: 14px;
 }
 
 .card-actions {
 	display: grid;
-	grid-template-columns: 20px 20px 20px;
+	grid-template-columns: 50px 50px 50px;
 	align-content: center;
 	justify-content: right;
-
 }
 
 .annoucements {
@@ -136,11 +191,19 @@ div {
 .a-title {
 	display: grid;
 	align-content: flex-end;
+	font-size: 16px;
+}
+
+.a-text {
+	color: gray;
+	font-size: 14px;
 }
 
 .section-title {
 	padding: 2.5px;
 	padding-top: 10px;
+	font-size: 22px;
+	padding-bottom: 10px;
 }
 
 .a-title, .a-text {
@@ -155,13 +218,12 @@ div {
 .pages {
 	grid-template-rows: repeat(4, 1fr);
 	display: grid;
-	height: 66%;
+	height: 65.5%;
 	row-gap: 10px;
 	background-color: white;
 	border-radius: 10px;
 	padding: 15px;
 	box-shadow: 2px 2px 10px lightgray;
-	overflow: hidden;
 }
 
 .page {
@@ -182,10 +244,33 @@ div {
 	display: grid;
 	align-content: flex-end;
 	padding-left: 2.5px;
+	font-size: 14px;
 }
 
 .page-name {
 	grid-row: 2;
 	grid-column: 2;
 	padding-left: 2.5px;
+	font-size: 12px;
+	color: gray;
+}
+
+.prime-logo, .menu-logo, .setting-logo {
+	filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(319deg) brightness(102%) contrast(101%);
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
+
+.prime-name {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+}
+
+.card-action {
+	display: grid;
+	align-items: center;
+	justify-content: center;
 }
